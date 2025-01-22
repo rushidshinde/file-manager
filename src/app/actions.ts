@@ -85,7 +85,7 @@ const upload = async (formData: FormData): Promise<UploadResult> => {
 
 const deleteFile = async (fileName: string) => {
   try {
-    const filePath = path.join("uploads", fileName);
+    const filePath = path.join("upload", fileName);
     await fs.unlink(filePath);
     revalidatePath("/");
   } catch (error) {

@@ -24,7 +24,7 @@ const GET = async (_: NextRequest, { params }: { params: Params }) => {
       return NextResponse.json({ error: "Invalid file type" }, { status: 400 });
     }
 
-    const filePath = path.join(process.cwd(), "uploads", fileName);
+    const filePath = path.join(process.cwd(), "upload", fileName);
 
     try {
       await fs.access(filePath);

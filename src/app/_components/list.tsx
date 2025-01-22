@@ -11,10 +11,10 @@ const List = async () => {
   let files: string[] = [];
 
   try {
-    files = await fs.readdir("uploads");
+    files = await fs.readdir("upload");
   } catch (error) {
     console.error(error);
-    await fs.mkdir("uploads", { recursive: true });
+    await fs.mkdir("upload", { recursive: true });
   }
 
   const groupedFiles = groupFilesByType(files);
